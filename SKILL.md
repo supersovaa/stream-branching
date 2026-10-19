@@ -1,11 +1,11 @@
 ---
 name: stream-branching
-description: Determine branch bases and integration boundaries when independent implementation streams integrate individual plan pull requests through stream branches before a stable branch.
+description: Plan or operate branch hierarchies that integrate individual implementation-plan pull requests into independent stream branches before stable-branch integration.
 ---
 
 # Stream Branching
 
-Use this skill when a repository develops independently completable implementation streams and integrates each stream into its stable branch after its individual implementation plans are complete.
+Use this skill when planning or operating a workflow that integrates implementation-plan pull requests into independent stream branches, then integrates completed streams into a stable branch.
 This skill selects branch and integration boundaries. Existing repository workflows own branch names, Git operations, pull-request creation, plan execution, and CI test selection.
 
 ## Select integration branches
@@ -20,13 +20,13 @@ This skill selects branch and integration boundaries. Existing repository workfl
 
 - Within the same development phase, make different streams completable without depending directly on one another's unfinished results.
 - Resolve a required cross-stream prerequisite during planning by establishing a shared contract in an earlier phase, assigning the responsibilities to one stream, or moving the consumer to a later phase.
-- Allow direct dependencies among plans within a stream. Treat shared files and compatible use of established contracts as concurrency concerns rather than dependencies by themselves.
+- Allow direct dependencies among plans within a stream. Shared files or use of established contracts alone imply neither a direct dependency nor a concurrency conflict; evaluate concrete interference with the existing planning workflow.
 - Use results integrated into the stable branch as prerequisites from earlier phases. Use results integrated into the stream branch as prerequisites within that stream.
 
 ## Validate integration
 
 - Validate plan pull requests according to their affected scope and the repository's existing test policy.
-- Require end-to-end verification of the completed stream on its integration pull request to the stable branch. If the stable branch advances in a way that affects this candidate, incorporate those changes and verify the updated candidate.
+- Require full end-to-end verification of the integrated system on the completed stream's pull request to the stable branch. If the stable branch advances in a way that affects this candidate, incorporate those changes and verify the updated candidate.
 - Treat the completed stream as established on the stable branch after the integration pull request is merged.
 
 This skill owns the stream-level integration strategy, not the mechanics of Git, pull requests, or CI configuration.
