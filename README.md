@@ -1,10 +1,10 @@
 # Stream Branching
 
-A lightweight skill for repositories that develop multiple independently completable implementation streams, with individual implementation-plan pull requests integrated into a stream branch before the whole stream is merged into the stable branch.
+A lightweight skill for planning or operating independently completable implementation streams, with plan pull requests integrated into stream branches before stable-branch integration.
 
 ## When to use
 
-Install and activate `stream-branching` for development that explicitly uses stream-level integration branches. It determines the branch hierarchy, plan-to-stream pull-request bases, cross-stream dependency boundary, and stream-completion verification boundary.
+Activate `stream-branching` when planning or operating stream-level integration branches. It determines the branch hierarchy, plan-to-stream pull-request bases, cross-stream dependency boundary, and stream-completion verification boundary.
 
 Ordinary repositories and work that do not use stream-level integration continue to use the existing branch and pull-request rules, such as targeting `main` or `master`. No changes to `codex-web-workflow`, `plan-driven-implementation`, or `ci-efficiency` are necessary to enable that ordinary mode.
 
